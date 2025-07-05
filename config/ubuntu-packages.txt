@@ -1,0 +1,61 @@
+# Ubuntu (GNOME) specific packages to remove
+# Comment out any line to keep the package
+
+# GNOME games and extras
+gnome-chess
+gnome-2048
+quadrapassel
+swell-foop
+lightsoff
+iagno
+five-or-more
+four-in-a-row
+gnome-klotski
+gnome-nibbles
+gnome-robots
+gnome-taquin
+gnome-tetravex
+
+# GNOME apps
+gnome-todo
+gnome-contacts
+gnome-weather
+gnome-maps
+gnome-characters
+gnome-disk-utility
+gnome-sound-recorder
+
+# GNOME shell extensions and tweaks (if not customizing)
+gnome-shell-extension-ubuntu-dock
+gnome-shell-extension-appindicator
+gnome-shell-extension-desktop-icons-ng
+gnome-shell-extension-prefs
+
+# Tracker (file indexing services)
+tracker
+tracker-miner-fs
+tracker-extract
+tracker-store
+tracker-gui
+
+# Remmina (remote desktop client)
+remmina
+remmina-common
+remmina-plugin-rdp
+remmina-plugin-vnc
+
+# Transmission (torrent client)
+transmission-gtk
+
+# Ubuntu-specific branding and welcome
+ubuntu-docs
+ubuntu-wallpapers
+ubuntu-wallpapers-*
+gnome-initial-setup
+ubuntu-report
+ubuntu-advantage-tools
+
+# Snap store (if replacing with apt/flatpak)
+snap-store
+gnome-software
+gnome-software-common

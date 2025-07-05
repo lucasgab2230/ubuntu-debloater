@@ -1,0 +1,76 @@
+# Kubuntu (KDE Plasma) specific packages to remove
+# Comment out any line to keep the package
+
+# KDE games and entertainment
+kpat
+ksudoku
+kmines
+kmahjongg
+kbreakout
+kbounce
+ksnakeduel
+kblocks
+granatier
+kapman
+bovo
+picmi
+
+# KDE education and science
+kgeography
+kwordquiz
+ktouch
+kstars
+kalzium
+blinken
+parley
+cantor
+
+# KDE multimedia
+dragonplayer
+juk
+kamoso
+kmix
+
+# KDE graphics and utilities
+kolourpaint
+gwenview
+okular
+spectacle
+skanlite
+
+# KDE PIM (Personal Information Management)
+kmail
+kontact
+korganizer
+kaddressbook
+akregator
+blogilo
+knotes
+
+# KDE remote desktop and networking
+krdc
+krfb
+kget
+
+# KDE system tools
+kde-config-tablet
+kde-config-touchpad
+kde-spectacle
+kuser
+partitionmanager
+
+# KDE development tools
+kate
+kdevelop
+kdesdk-kio-plugins
+
+# Snap and Discover (if replacing with apt/flatpak)
+plasma-discover
+plasma-discover-backend-snap
+plasma-discover-backend-flatpak
+snapd
+
+# Telemetry and feedback
+apport
+whoopsie
+ubuntu-report

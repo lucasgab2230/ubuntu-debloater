@@ -1,0 +1,29 @@
+# Common services to disable across all Ubuntu flavors
+# Comment out any line to keep the service enabled
+
+# Telemetry and crash reporting
+apport.service
+whoopsie.service
+
+# Remote access (if not needed)
+avahi-daemon.service
+cups-browsed.service
+cups.service
+# bluetooth.service
+ModemManager.service
+
+# Snap-related background services
+snapd.service
+snapd.socket
+snapd.seeded.service
+
+# Package update notifier (can be disabled if using manual updates)
+packagekit.service
+packagekit-offline-update.service
+
+# Printing and scanning (if not using printers)
+saned.service
+
+# Tracker (file indexing, GNOME-related)
+tracker-miner-fs.service
+tracker-store.service

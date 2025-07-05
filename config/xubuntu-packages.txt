@@ -1,0 +1,54 @@
+# Xubuntu (XFCE) specific packages to remove
+# Comment out any line to keep the package
+
+# Games and entertainment
+aisleriot
+gnome-mines
+gnome-sudoku
+gbrainy
+
+# Office and productivity
+abiword
+gnumeric
+orage
+
+# Multimedia
+parole
+xfburn
+gthumb
+ristretto
+
+# Accessories and utilities
+mousepad
+xfce4-dict
+xfce4-notes
+xfce4-screenshooter
+xfce4-taskmanager
+xfce4-terminal
+
+# Internet
+pidgin
+transmission-gtk
+
+# Graphics
+simple-scan
+xsane
+gimp
+
+# Help and documentation
+yelp
+
+# Printing (if not needed)
+cups
+cups-browsed
+system-config-printer
+
+# Snap and software center
+snapd
+gnome-software
+gnome-software-plugin-snap
+
+# Telemetry and feedback
+apport
+whoopsie
+ubuntu-report
