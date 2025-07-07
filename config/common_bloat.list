@@ -1,0 +1,46 @@
+# config/common_bloat.list
+# List of packages commonly considered "bloatware" across various Ubuntu and its derivatives.
+# This list can be used in conjunction with distribution-specific lists, or as a standalone
+# list for a more generic debloating approach.
+# Each package name should be on a new line.
+# Lines starting with '#' are comments and will be ignored by the script.
+#
+# WARNING: Removing system packages can have unintended consequences.
+# Review this list carefully before running the debloater script.
+# If you are unsure about a package, it's safer to leave it commented out or remove it from the list.
+
+# --- Games ---
+gnome-mahjongg
+gnome-mines
+gnome-sudoku
+aisleriot
+quadrapassel
+hitori
+lightsoff
+swell-foop
+# These are common GNOME games often found across Ubuntu flavors.
+
+# --- Internet and Communication (if not used) ---
+remmina
+remmina-plugin-vnc
+remmina-plugin-secret
+remmina-plugin-rdp
+# Remote desktop client and its plugins.
+
+# --- Multimedia and Graphics (if not used) ---
+simple-scan # Document scanner - if you don't have a scanner or prefer a different tool
+
+# --- System Utilities (review carefully, some might be useful for troubleshooting) ---
+apport # Crash reporting - can be useful for debugging, but some users remove it
+apport-gtk
+whoopsie # Crash submission daemon - sends crash reports to Ubuntu
+popularity-contest # Sends anonymous usage statistics - often removed for privacy or minimal footprint
+
+# --- Accessibility (only remove if you don't need any accessibility features) ---
+gnome-orca
+orca
+brltty # Braille display driver
+speech-dispatcher
+speech-dispatcher-audio-plugins
+speech-dispatcher-espeak-ng
+# These are common accessibility tools. Only remove if you are certain they are not needed.

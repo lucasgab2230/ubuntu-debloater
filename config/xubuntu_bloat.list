@@ -1,0 +1,36 @@
+# config/xubuntu_bloat.list
+# List of packages commonly considered "bloatware" for Xubuntu installations.
+# Each package name should be on a new line.
+# Lines starting with '#' are comments and will be ignored by the script.
+#
+# WARNING: Removing system packages can have unintended consequences.
+# Review this list carefully before running the debloater script.
+# If you are unsure about a package, it's safer to leave it commented out or remove it from the list.
+
+# --- Games ---
+gnome-mahjongg # GNOME games that might be included
+gnome-mines
+gnome-sudoku
+aisleriot
+quadrapassel
+hitori
+lightsoff
+swell-foop
+xfce4-sudoku # XFCE specific game (if it exists and is considered bloat)
+xfce4-mines # XFCE specific game (if it exists and is considered bloat)
+
+# --- Internet and Communication (if not used) ---
+pidgin # Instant messaging client
+xfce4-mailwatch-plugin # Mail notification plugin (if not using)
+remmina
+remmina-plugin-vnc
+remmina-plugin-secret
+remmina-plugin-rdp
+
+# --- Accessibility (only remove if you don't need any accessibility features) ---
+gnome-orca
+orca
+brltty # Braille display driver
+speech-dispatcher
+speech-dispatcher-audio-plugins
+speech-dispatcher-espeak-ng

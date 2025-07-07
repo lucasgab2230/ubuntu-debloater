@@ -1,0 +1,39 @@
+# config/kubuntu_bloat.list
+# List of packages commonly considered "bloatware" for Kubuntu installations.
+# Each package name should be on a new line.
+# Lines starting with '#' are comments and will be ignored by the script.
+#
+# WARNING: Removing system packages can have unintended consequences.
+# Review this list carefully before running the debloater script.
+# If you are unsure about a package, it's safer to leave it commented out or remove it from the list.
+
+# --- Games (KDE specific games or general bloat) ---
+kmahjongg
+kmines
+ksudoku
+kpat
+kblocks
+kdegames-card-data
+kdegames-arcade-data
+kdegames-board-data
+kdegames-puzzle-data
+kdegames-strategy-data
+
+# --- Internet and Communication (if not used) ---
+akonadi-server # KDE PIM (Personal Information Management) backend
+akonadi-backend-mysql # If not using MySQL for Akonadi
+akonadi-backend-sqlite # If not using SQLite for Akonadi
+plasma-browser-integration # If you don't use browser integration features
+kdeconnect # If you don't use phone integration
+konversation # IRC client
+kmail # Email client
+korganizer # Calendar and scheduling
+kaddressbook # Address book
+
+# --- Accessibility (only remove if you don't need any accessibility features) ---
+kmag # Screen magnifier
+kmouth # Speech synthesizer frontend
+kaccessible # KDE accessibility services
+
+# --- Other ---
+example-content # Example documents/pictures (less common in Kubuntu, but can exist)

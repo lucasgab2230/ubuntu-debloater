@@ -1,94 +1,63 @@
-# 🧹 Ubuntu Debloater
+# Ubuntu Debloater for LinuxToys
 
-A modular and customizable shell script toolkit to debloat Ubuntu and its derivatives (Kubuntu, Xubuntu, etc.). This project helps you remove unnecessary packages, disable unwanted services, and clean up your system for better performance and minimalism.
+## Overview
 
----
+Welcome to the **Ubuntu Debloater**, a powerful and carefully designed tool within the [LinuxToys](https://github.com/psygreg/linuxtoys) project. This utility aims to help users streamline their Ubuntu and Ubuntu-derived systems (such as Kubuntu, Xubuntu, Lubuntu, and Linux Mint) by safely removing unnecessary "bloatware" packages. Our primary goal is to enhance system performance and reduce disk space usage without compromising system stability or core functionality.
 
-## 🚀 Features
+## Purpose
 
-- Detects Ubuntu flavor automatically
-- Removes pre-installed bloatware by flavor
-- Disables unnecessary background services
-- Cleans up residual files and caches
-- Modular scripts for easy customization
-- Logs every action and backs up package lists
+Many Linux distributions, including Ubuntu and its derivatives, come pre-installed with a variety of applications and utilities that might not be essential for every user. While these applications can be convenient, they can also consume valuable system resources and disk space. The Ubuntu Debloater provides a systematic way to identify and remove these non-critical packages, giving you a leaner, faster, and more personalized operating system experience.
 
----
+## Features
 
-## 📦 Supported Flavors
+- **Distribution-Aware Debloating:** Automatically detects your specific Ubuntu derivative and applies a tailored list of packages for removal, ensuring compatibility and minimizing risks.
+- **Safe Removal:** Designed with caution in mind, focusing on non-essential packages to prevent system breakage. It leverages `apt` commands for clean uninstallation.
+- **User Confirmation:** Prompts for user confirmation before executing any removal commands, giving you full control over what gets removed.
+- **Post-Removal Cleanup:** Includes steps to perform `autoremove` and `autoclean` operations after debloating to ensure all residual files are purged.
+- **Reversion Option (Experimental):** An experimental script is provided to help revert some common changes, offering a potential safety net.
+- **Configurable Package Lists:** Easy-to-understand configuration files allow advanced users to customize the list of packages to be removed.
 
-- Ubuntu (GNOME)
-- Kubuntu (KDE)
-- Xubuntu (XFCE)
-- [More coming soon...]
+## Supported Distributions
 
----
+The Ubuntu Debloater is designed to work with:
 
-## 🛠️ Usage
+- Ubuntu (Standard GNOME)
+- Kubuntu
+- Xubuntu
+- Lubuntu
+- Linux Mint (Cinnamon, MATE, XFCE editions)
 
-### 1. Clone the Repository
+## Disclaimer & Warnings
 
-```bash
-git clone https://github.com/yourusername/ubuntu-debloater.git
-cd ubuntu-debloater
-```
+**USE WITH CAUTION!** While this tool is designed to be safe, removing system packages always carries an inherent risk.
 
-### 2. Make the Script Executable
+- **Backup Your System:** It is **highly recommended** to create a system backup or a snapshot (if using a virtual machine) before running this debloater.
+- **Review Package Lists:** Before running the script, we strongly advise you to review the package lists in the `config/` directory to understand exactly what will be removed.
+- **No Guarantees:** We cannot guarantee that removing certain packages won't affect specific functionalities you rely on, especially if you have unique software requirements or custom configurations.
+- **"Bloatware" is Subjective:** What one user considers "bloatware" another might find essential. The default lists are curated based on common perceptions but may not align with everyone's needs.
 
-```bash
-chmod +x debloat.sh
-```
+## Basic Usage
 
-### 3. Run the script (as root)
+1. **Navigate to the Debloater Directory:**
+   ```bash
+   cd /path/to/linuxtoys/debloater
+   ```
+2. **Make the Script Executable:**
+   ```bash
+   chmod +x debloat.sh
+   ```
+3. **Run the Debloater (with sudo):**
+   ```bash
+   sudo ./debloat.sh
+   ```
+   The script will detect your distribution, display the packages it intends to remove, and ask for your confirmation.
 
-```bash
-sudo ./debloat.sh
-```
+For more detailed instructions, customization options, and troubleshooting, please refer to the `docs/` directory.
 
-⚠️ Always review the package and service lists before running. You can customize them in the config/ and services/ directories.
+## Contributing
 
----
+We welcome contributions! If you have suggestions for improving package lists, enhancing the script, or adding support for new derivatives, please feel free to open an issue or submit a pull request on the main [LinuxToys GitHub repository](https://github.com/psygreg/linuxtoys).
 
-### 🧩 Customization
+## License
 
-Add or remove packages in `config/custom-packages.txt`
-
-Modify service lists in `services/`
-
-Extend or modify behavior in `scripts/` and `utils/`
-
----
-
-### 📝 Logs & Backups
-
-Logs are saved in logs/ with timestamps
-
-A backup of installed packages is saved in backups/ before any removal
-
----
-
-### 🧪 Testing
-
-Run test scripts from the tests/ directory to validate functionality:
-
-```bash
-bash tests/test-detect-flavor.sh
-```
-
-### 📜 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
----
-
-### 🤝 Contributing
-
-Pull requests are welcome! If you have suggestions for improvements or want to support more Ubuntu flavors, feel free to fork and contribute.
-
----
-
-### 🙏 Acknowledgments
-
-Inspired by the minimalist Linux philosophy and the desire for a faster, cleaner Ubuntu experience.
-
-“Simplicity is the ultimate sophistication.” – Leonardo da Vinci
+This Ubuntu Debloater tool is distributed under the [MIT License](LICENSE).

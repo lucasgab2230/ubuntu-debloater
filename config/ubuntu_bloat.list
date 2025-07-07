@@ -1,0 +1,63 @@
+# config/ubuntu_bloat.list
+# List of packages commonly considered "bloatware" for standard Ubuntu (GNOME) installations.
+# Each package name should be on a new line.
+# Lines starting with '#' are comments and will be ignored by the script.
+#
+# WARNING: Removing system packages can have unintended consequences.
+# Review this list carefully before running the debloater script.
+# If you are unsure about a package, it's safer to leave it commented out or remove it from the list.
+
+# --- Office and Productivity ---
+libreoffice-common
+libreoffice-calc
+libreoffice-draw
+libreoffice-impress
+libreoffice-math
+libreoffice-writer
+thunderbird
+
+# --- Games ---
+gnome-mahjongg
+gnome-mines
+gnome-sudoku
+aisleriot
+quadrapassel
+hitori
+lightsoff
+swell-foop
+
+# --- Internet and Communication (if not used) ---
+remmina
+remmina-plugin-vnc
+remmina-plugin-secret
+remmina-plugin-rdp
+rhythmbox
+
+# --- Multimedia and Graphics (if not used) ---
+cheese
+gnome-characters
+shotwell
+totem
+simple-scan
+
+# --- System Utilities (review carefully, some might be useful) ---
+gnome-disk-utility # Disk Usage Analyzer - can be useful, but if you prefer command line tools, can remove
+gnome-font-viewer
+gnome-system-monitor # System Monitor - can be useful, but if you prefer htop/htop, can remove
+gnome-todo
+yelp # Help documentation viewer
+apport # Crash reporting - can be useful for debugging, but some users remove it
+apport-gtk
+whoopsie # Crash submission daemon
+popularity-contest # Sends anonymous usage statistics
+
+# --- Accessibility (only remove if you don't need any accessibility features) ---
+gnome-orca
+orca
+brltty # Braille display driver
+speech-dispatcher
+speech-dispatcher-audio-plugins
+speech-dispatcher-espeak-ng
+
+# --- Other ---
+example-content # Example documents/pictures

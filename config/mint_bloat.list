@@ -1,0 +1,27 @@
+# config/mint_bloat.list
+# List of packages commonly considered "bloatware" for Linux Mint installations.
+# Each package name should be on a new line.
+# Lines starting with '#' are comments and will be ignored by the script.
+#
+# WARNING: Removing system packages can have unintended consequences.
+# Review this list carefully before running the debloater script.
+# If you are unsure about a package, it's safer to leave it commented out or remove it from the list.
+
+# --- Games ---
+gnome-mahjongg # GNOME games that might be included
+gnome-mines
+gnome-sudoku
+aisleriot
+quadrapassel
+hitori
+lightsoff
+swell-foop
+# Linux Mint often includes a few simple games by default.
+
+# --- Accessibility (only remove if you don't need any accessibility features) ---
+gnome-orca
+orca
+brltty # Braille display driver
+speech-dispatcher
+speech-dispatcher-audio-plugins
+speech-dispatcher-espeak-ng
