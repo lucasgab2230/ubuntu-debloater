@@ -128,7 +128,9 @@ check_local_files() {
     [[ -f "${SCRIPT_DIR}/debloat.sh" ]] && \
     [[ -f "${SCRIPT_DIR}/uninstall.sh" ]] && \
     [[ -d "${SCRIPT_DIR}/config" ]] && \
-    [[ -d "${SCRIPT_DIR}/scripts" ]]
+    [[ -f "${SCRIPT_DIR}/config/ubuntu_bloat.list" ]] && \
+    [[ -d "${SCRIPT_DIR}/scripts" ]] && \
+    [[ -f "${SCRIPT_DIR}/scripts/functions.sh" ]]
 }
 
 # --- Check for root privileges ---
