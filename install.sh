@@ -40,15 +40,15 @@ install_debloater() {
 
     # Check if required files exist
     if [[ ! -f "${SCRIPT_DIR}/debloat.sh" ]]; then
-        log_error "debloat.sh not found. Please run this script from the ubuntu-debloater directory."
+        log_error "debloat.sh not found. Please run this script from the repository root directory."
     fi
 
     if [[ ! -d "${SCRIPT_DIR}/config" ]]; then
-        log_error "config directory not found. Please run this script from the ubuntu-debloater directory."
+        log_error "config directory not found. Please run this script from the repository root directory."
     fi
 
     if [[ ! -d "${SCRIPT_DIR}/scripts" ]]; then
-        log_error "scripts directory not found. Please run this script from the ubuntu-debloater directory."
+        log_error "scripts directory not found. Please run this script from the repository root directory."
     fi
 
     # Create installation directory
@@ -72,11 +72,11 @@ install_debloater() {
     chmod 755 "${INSTALL_DIR}/debloat.sh"
     chmod 755 "${INSTALL_DIR}/uninstall.sh"
     # Set executable permissions for shell scripts in scripts directory
-    find "${INSTALL_DIR}/scripts" -type f -name "*.sh" -exec chmod 755 {} \;
+    find "${INSTALL_DIR}/scripts" -type f -name "*.sh" -exec chmod 755 {} +
     # Set read permissions for config files
-    find "${INSTALL_DIR}/config" -type f -exec chmod 644 {} \;
+    find "${INSTALL_DIR}/config" -type f -exec chmod 644 {} +
     # Set directory permissions
-    find "${INSTALL_DIR}" -type d -exec chmod 755 {} \;
+    find "${INSTALL_DIR}" -type d -exec chmod 755 {} +
 
     # Create symbolic link
     log_info "Creating symbolic link: ${BIN_LINK}"
