@@ -31,9 +31,12 @@ korganizer # Calendar and scheduling
 kaddressbook # Address book
 
 # --- Accessibility (only remove if you don't need any accessibility features) ---
-kmag # Screen magnifier
-kmouth # Speech synthesizer frontend
-kaccessible # KDE accessibility services
+# NOTE: Accessibility packages have been removed from this list as they can break
+# important functionality for users who need them, and some applications may
+# depend on them. Only advanced users should consider removing these manually.
+# kmag - Screen magnifier
+# kmouth - Speech synthesizer frontend
+# kaccessible - KDE accessibility services
 
 # --- Other ---
 example-content # Example documents/pictures (less common in Kubuntu, but can exist)

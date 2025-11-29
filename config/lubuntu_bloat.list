@@ -20,9 +20,10 @@ swell-foop
 # Check specific Lubuntu versions for pre-installed games
 
 # --- Accessibility (only remove if you don't need any accessibility features) ---
-gnome-orca
-orca
-brltty # Braille display driver
-speech-dispatcher
-speech-dispatcher-audio-plugins
-speech-dispatcher-espeak-ng
+# NOTE: Accessibility packages have been removed from this list as they can break
+# important functionality for users who need them, and some applications may
+# depend on them. Only advanced users should consider removing these manually.
+# gnome-orca
+# orca
+# brltty - Braille display driver (can cause USB serial port issues if removed)
+# speech-dispatcher and related packages - required by some applications

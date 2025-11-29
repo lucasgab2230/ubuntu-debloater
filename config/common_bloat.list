@@ -31,16 +31,15 @@ remmina-plugin-rdp
 simple-scan # Document scanner - if you don't have a scanner or prefer a different tool
 
 # --- System Utilities (review carefully, some might be useful for troubleshooting) ---
-apport # Crash reporting - can be useful for debugging, but some users remove it
-apport-gtk
-whoopsie # Crash submission daemon - sends crash reports to Ubuntu
+# NOTE: The following packages should NOT be removed as they are essential for system functionality:
+# apport/apport-gtk/whoopsie - Core crash reporting system, removing can cause system instability
 popularity-contest # Sends anonymous usage statistics - often removed for privacy or minimal footprint
 
 # --- Accessibility (only remove if you don't need any accessibility features) ---
-gnome-orca
-orca
-brltty # Braille display driver
-speech-dispatcher
-speech-dispatcher-audio-plugins
-speech-dispatcher-espeak-ng
-# These are common accessibility tools. Only remove if you are certain they are not needed.
+# NOTE: Accessibility packages have been removed from this list as they can break
+# important functionality for users who need them, and some applications may
+# depend on them. Only advanced users should consider removing these manually.
+# gnome-orca
+# orca
+# brltty - Braille display driver (can cause USB serial port issues if removed)
+# speech-dispatcher and related packages - required by some applications
