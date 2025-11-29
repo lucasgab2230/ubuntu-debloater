@@ -58,6 +58,7 @@ install_debloater() {
     # Copy files
     log_info "Copying files to ${INSTALL_DIR}..."
     cp "${SCRIPT_DIR}/debloat.sh" "${INSTALL_DIR}/"
+    cp "${SCRIPT_DIR}/uninstall.sh" "${INSTALL_DIR}/"
     cp -r "${SCRIPT_DIR}/config" "${INSTALL_DIR}/"
     cp -r "${SCRIPT_DIR}/scripts" "${INSTALL_DIR}/"
 
@@ -69,10 +70,13 @@ install_debloater() {
     # Set permissions
     log_info "Setting permissions..."
     chmod 755 "${INSTALL_DIR}/debloat.sh"
-    chmod 755 "${INSTALL_DIR}/scripts/"*.sh 2>/dev/null || true
-    chmod -R 644 "${INSTALL_DIR}/config/"* 2>/dev/null || true
-    chmod 755 "${INSTALL_DIR}/config"
-    chmod 755 "${INSTALL_DIR}/scripts"
+    chmod 755 "${INSTALL_DIR}/uninstall.sh"
+    # Set executable permissions for shell scripts in scripts directory
+    find "${INSTALL_DIR}/scripts" -type f -name "*.sh" -exec chmod 755 {} \;
+    # Set read permissions for config files
+    find "${INSTALL_DIR}/config" -type f -exec chmod 644 {} \;
+    # Set directory permissions
+    find "${INSTALL_DIR}" -type d -exec chmod 755 {} \;
 
     # Create symbolic link
     log_info "Creating symbolic link: ${BIN_LINK}"
@@ -84,7 +88,7 @@ install_debloater() {
     echo "  sudo ubuntu-debloater"
     echo ""
     echo "Installation directory: ${INSTALL_DIR}"
-    echo "To uninstall, run: sudo rm -rf ${INSTALL_DIR} ${BIN_LINK}"
+    echo "To uninstall, run: sudo ${INSTALL_DIR}/uninstall.sh"
 }
 
 # --- Main ---
